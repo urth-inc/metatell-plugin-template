@@ -11,7 +11,7 @@ All examples are written in TypeScript and React.
 You can clone this repository by running the command below.
 
 ```bash
-git clone git@github.com:urth-inc/metatell_plugin_template.git
+git clone git@github.com:urth-inc/metatell-plugin-template.git
 ```
 
 2. Copy the selected plugin template to your desired location
@@ -19,7 +19,7 @@ git clone git@github.com:urth-inc/metatell_plugin_template.git
 If you select the `AdditionalToolbarButton` plugin template, you can copy it to your desired location by running the command below.
 
 ```bash
-cp -r metatell_plugin_template/AdditionalToolbarButton /path/to/your/desired/location
+cp -r metatell-plugin-template/AdditionalToolbarButton /path/to/your/desired/location
 ```
 
 3. Initialize the git repository
@@ -39,7 +39,7 @@ Each plugin template has its own README file that explains how to develop the pl
 
 We assume that local plugin is running on `http://localhost:3004`.
 
-1. update `src/hub.js` in `metatell_client`. VersionId is written in `.uuid.env` in `metatell_plugin_template`.
+1. update `src/hub.js` in `metatell_client`. VersionId is written in `.uuid.env` in `metatell-plugin-template`.
 
 If you run `npm run dev` or `npm run build`, `versionId` will be changed every time.
 
