@@ -3,7 +3,8 @@ const fs = require("fs");
 const { name, version, description } = require("../package.json");
 const process = require("process");
 
-const versionId = process.argv[2];
+const versionId = process.env.VERSION_ID;
+
 const metadata = {
   name,
   version,
