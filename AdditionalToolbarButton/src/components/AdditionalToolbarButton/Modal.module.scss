@@ -1,18 +1,14 @@
 @use "./styles/theme.scss";
 
-// TODO 下記スタイル要改修
 :local(.modal) {
   position: relative;
   display: flex;
   flex-direction: column;
   height: max-content;
   border: none;
-  //border-radius: theme.$border-radius-regular;
   margin: 24px;
   z-index: 1;
   width: 100%;
-  // max-width: 360px;
-  //半透明のブラックを中央のポップオーバーの背景色に
   background-color: rgba($color: #303030, $alpha: 0.5);
   max-width: 460px;
 }
@@ -77,8 +73,6 @@
   }
 }
 
-// NOTE 以下推奨
-// TODO 下記クラス名の頭文字を小文字にする
 :local(.modalWrap) {
   display: none;
 

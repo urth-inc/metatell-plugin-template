@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { ModalWrapper } from "./ModalWrapper";
 
-import * as styles from "./IframeModal.scss";
+import * as styles from "./IframeModal.module.scss";
 
 type IframeModalProps = {
   onClose: () => void;
