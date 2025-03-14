@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 import React from "react";
 
-import * as styles from "./Button.scss";
+import * as styles from "./Button.module.scss";
 
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import type { FC } from "react";

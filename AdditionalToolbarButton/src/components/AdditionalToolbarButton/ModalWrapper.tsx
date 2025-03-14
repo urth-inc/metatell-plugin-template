@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React, { memo } from "react";
 
-import * as styles from "./ModalWrapper.scss";
+import * as styles from "./ModalWrapper.module.scss";
 import { OverlayModal } from "./OverlayModal";
 
 import type { ModalProps } from "./OverlayModal";

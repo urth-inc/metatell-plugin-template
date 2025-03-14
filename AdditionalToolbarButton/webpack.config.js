@@ -54,9 +54,9 @@ module.exports = {
           presets: ["@babel/preset-react"],
         },
       },
-      // CSS Modules Role
+      // CSS Modules Rule
       {
-        test: /\.module\(scss|css)$/,
+        test: /\.module\.(scss|css)$/,
         use: [
           { loader: MiniCssExtractPlugin.loader },
           {

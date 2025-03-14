@@ -1,9 +1,9 @@
 import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import "./styles/global.scss";
+import "./styles/global.module.scss";
 
-import * as generalStyles from "./styles/preferences-screen.scss";
+import * as generalStyles from "./styles/preferences-screen.module.scss";
 import { ToolbarButton } from "./ToolbarButton";
 
 import { IframeModal } from "./IframeModal";
