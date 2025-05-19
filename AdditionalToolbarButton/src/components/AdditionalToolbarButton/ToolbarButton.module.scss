@@ -6,22 +6,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 48px;
+  width: 42px;
+  pointer-events: auto;
 
   label {
     cursor: pointer;
     color: theme.$text7-color;
-    margin-top: 8px;
-    margin-bottom: 3px;
+    margin-top: 4px;
+    margin-bottom: 2px;
     white-space: nowrap;
+    font-size: 8px;
   }
 }
 
 :local(.icon-container) {
   position: relative;
   border-radius: 9999px;
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +48,7 @@
 }
 
 :local(.large) :local(.icon-container) {
-  width: 96px;
+  width: 84px;
   height: 96px;
 }
 
@@ -239,15 +241,6 @@
   }
 }
 
-:local(.audio-button) {
-  border-color: theme.$transparent;
-  background-color: theme.$transparent;
-
-  :local(.icon-container) {
-    border-color: theme.$darkgrey;
-  }
-}
-
 :local(.primary) {
   :local(.icon-container) {
     background-color: theme.$primary-color;
@@ -429,7 +422,7 @@
 
 :local(.accent2) {
   :local(.icon-container) {
-    background-color: theme.$black;
+    background-color: transparent;
   }
 
   &:hover :local(.icon-container) {
@@ -496,7 +489,7 @@
 
 :local(.accent3) {
   :local(.icon-container) {
-    background-color: theme.$black;
+    background-color: transparent;
   }
 
   &:hover :local(.icon-container) {
@@ -858,50 +851,5 @@
     path {
       fill: theme.$red;
     }
-  }
-}
-
-:local(.left) {
-  :local(.icon-container) {
-    width: 48px;
-    border-radius: 0px;
-    border-top-left-radius: 9999px;
-    border-bottom-left-radius: 9999px;
-  }
-}
-
-:local(.middle) {
-  :local(.icon-container) {
-    border-radius: 0px;
-  }
-}
-
-:local(.right) {
-  :local(.icon-container) {
-    width: 48px;
-    border-radius: 0px;
-    border-top-right-radius: 9999px;
-    border-bottom-right-radius: 9999px;
-  }
-}
-
-:local(.screenSelected) {
-  :local(.icon-container) {
-    border-color: theme.$transparent;
-    background-color: transparent;
-
-    svg {
-      *[stroke="\#000"] {
-        stroke: theme.$urth-blue;
-      }
-
-      path {
-        fill: theme.$urth-blue;
-      }
-    }
-  }
-
-  label {
-    color: theme.$urth-blue;
   }
 }
