@@ -1,17 +1,17 @@
 .custom-leave-button-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   background: transparent;
   height: 100%;
   max-width: 42px;
-  pointer-events: auto;
   cursor: pointer;
   color: gold;
   border: none;
   width: 100%;
   padding: 0;
   margin: 0;
+  pointer-events: auto;
 }
 
 .custom-leave-button-label {
