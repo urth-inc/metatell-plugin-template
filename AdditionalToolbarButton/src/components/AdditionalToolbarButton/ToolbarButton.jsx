@@ -16,8 +16,6 @@ export const presets = [
   "urth-staff-red",
   "urth-staff-green-onclick",
   "urth-staff-blue-onclick",
-  "audio-button",
-  "screenSelected",
 ];
 
 export const types = ["none", "left", "middle", "right"];

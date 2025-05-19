@@ -7,7 +7,7 @@ const App: React.FC = () => {
   return (
     <div className={styles.appContainer}>
       <h2 className={styles.appHeadingContainer}>
-        CustomToolbarButton Component
+        AdditionalToolbarButton Component
       </h2>
       <AdditionalToolbarButton />
     </div>

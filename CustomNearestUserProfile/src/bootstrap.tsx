@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import App from "./App";
 
-import "./styles/global.scss";
+import "./styles/global.module.scss";
 
 const remoteElement = document.getElementById("root");
 if (!remoteElement) {

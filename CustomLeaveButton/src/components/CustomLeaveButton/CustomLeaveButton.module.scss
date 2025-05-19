@@ -1,23 +1,24 @@
 .custom-leave-button-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   background: transparent;
   height: 100%;
-  max-width: 48px;
+  max-width: 42px;
   cursor: pointer;
   color: gold;
   border: none;
   width: 100%;
   padding: 0;
   margin: 0;
+  pointer-events: auto;
 }
 
 .custom-leave-button-label {
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 700;
-  margin-top: 8px;
-  margin-bottom: 3px;
+  margin-top: 4px;
+  margin-bottom: 2px;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -28,8 +29,8 @@
 }
 
 .sample-icon-container {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
