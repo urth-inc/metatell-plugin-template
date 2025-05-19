@@ -3,8 +3,8 @@ import React from "react";
 export const AvatarCameraIcon: React.FC = () => {
   return (
     <svg
-      width="35"
-      height="35"
+      width="24"
+      height="24"
       viewBox="0 0 35 35"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
