@@ -64,6 +64,7 @@ module.exports = {
             options: {
               modules: {
                 localIdentName: "[name]__[local]__[hash:base64:5]",
+                localIdentHashSalt: JSON.stringify(process.env.VERSION_ID),
                 exportLocalsConvention: "camelCase",
                 mode: "local",
               },
