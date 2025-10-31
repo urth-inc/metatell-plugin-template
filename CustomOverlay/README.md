@@ -83,7 +83,7 @@ You can find the built files in the `dist` directory.
 
 5. Publish the project
 
-You can publish the plugin from `metatell-admin` in future.
+You can upload the plugin from `metatell-admin` dashboard.
 
 ## Tips
 
