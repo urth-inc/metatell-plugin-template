@@ -10,7 +10,7 @@ You can replace the default megaphone button a custom one by creating a CustomCh
 
 ## Pre-requisites
 
-- Node.js 20 (We recommend using volta to manage node versions)
+- Node.js 24 (We recommend using volta to manage node versions)
 
 ## npm scripts
 

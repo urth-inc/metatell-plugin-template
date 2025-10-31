@@ -12,7 +12,7 @@ The default NearestUserProfile looks like this:
 
 ## Pre-requisites
 
-- Node.js 20 (We recommend using volta to manage node versions)
+- Node.js 24 (We recommend using volta to manage node versions)
 
 ## npm scripts
 

@@ -6,7 +6,7 @@ This is a template for creating an additional toolbar button for metatell.
 
 ## Pre-requisites
 
-- Node.js 20 (We recommend using volta to manage node versions)
+- Node.js 24 (We recommend using volta to manage node versions)
 
 ## npm scripts
 
