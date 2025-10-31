@@ -22,7 +22,7 @@ You can replace the default leave button and modal with a custom one by creating
 
 ## Pre-requisites
 
-- Node.js 20 (We recommend using volta to manage node versions)
+- Node.js 24 (We recommend using volta to manage node versions)
 
 ## npm scripts
 

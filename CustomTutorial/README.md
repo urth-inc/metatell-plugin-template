@@ -23,7 +23,7 @@ You can use these props to conditionally render the components.
 
 ## Pre-requisites
 
-- Node.js 20 (We recommend using volta to manage node versions)
+- Node.js 24 (We recommend using volta to manage node versions)
 
 ## npm scripts
 

@@ -24,7 +24,7 @@ You can replace the default chat button and modal with a custom chat button and 
 
 ## Pre-requisites
 
-- Node.js 20 (We recommend using volta to manage node versions)
+- Node.js 24 (We recommend using volta to manage node versions)
 
 ## npm scripts
 
