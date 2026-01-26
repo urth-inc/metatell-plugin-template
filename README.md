@@ -84,4 +84,4 @@ In that case, you can un-applied the plugin from `metatell-admin`.
 - [CustomMegaphoneButton](./CustomMegaphoneButton): This plugin template shows how to create a custom megaphone button.
 - [CustomNearestUserProfile](./CustomNearestUserProfile): This plugin template shows how to create a custom NearestUserProfile.
 - [CustomTutorial](./CustomTutorial): This plugin template shows how to create a custom tutorial.
-
+- [CustomAccessDeniedScreen](./CustomAccessDeniedScreen): This plugin template shows how to create a custom access denied screen.

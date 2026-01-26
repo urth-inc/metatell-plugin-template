@@ -1,0 +1,35 @@
+{
+  "name": "custom-access-denied-screen-template",
+  "description": "A template for creating a custom access denied screen for metatell",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run set-uuid && env-cmd -f .uuid.env vite",
+    "build": "npm run set-uuid && env-cmd -f .uuid.env vite build",
+    "preview": "vite preview",
+    "lint:tsc": "tsc --noEmit",
+    "lint:prettier": "prettier --check 'src/**/*.{js,jsx,ts,tsx,css}'",
+    "lint": "npm run lint:tsc && npm run lint:prettier",
+    "lint-fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css}'",
+    "set-uuid": "node ./scripts/set_uuid.js > .uuid.env"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@module-federation/vite": "1.9.7",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "5.1.2",
+    "env-cmd": "11.0.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3",
+    "uuid": "13.0.0",
+    "vite": "6.4.1"
+  },
+  "volta": {
+    "node": "24.11.0",
+    "npm": "11.6.2"
+  }
+}
