@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { federation } from "@module-federation/vite";
 
-const versionId = process.env.VERSION_ID || "custom-access-denied-screen";
+const versionId = process.env.VERSION_ID || "custom-exit-screen";
 
 export default defineConfig({
   plugins: [
@@ -11,7 +11,7 @@ export default defineConfig({
       name: versionId,
       filename: "remoteEntry.js",
       exposes: {
-        "./CustomAccessDeniedScreen": "./src/components/CustomAccessDeniedScreen"
+        "./CustomExitScreen": "./src/components/CustomExitScreen"
       },
       shared: {
         react: {
