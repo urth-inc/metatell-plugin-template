@@ -4,12 +4,18 @@ import { federation } from "@module-federation/vite";
 
 const versionId = process.env.VERSION_ID || "custom-exit-screen";
 
-export default defineConfig({
+const rawPublicPath = process.env.MF_PUBLIC_PATH || process.env.PUBLIC_PATH || "";
+const publicPath = rawPublicPath ? rawPublicPath.replace(/\/?$/, "/") : "auto";
+
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? "./" : "/",
   plugins: [
     react(),
     federation({
       name: versionId,
       filename: "remoteEntry.js",
+      manifest: true,
+      publicPath,
       exposes: {
         "./CustomExitScreen": "./src/components/CustomExitScreen"
       },
@@ -22,8 +28,7 @@ export default defineConfig({
           singleton: true,
           requiredVersion: "18.3.1"
         }
-      },
-      manifest: true
+      }
     })
   ],
   build: {
@@ -38,4 +43,4 @@ export default defineConfig({
       "Access-Control-Allow-Origin": "*"
     }
   }
-});
+}));
