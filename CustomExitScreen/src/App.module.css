@@ -1,137 +1,141 @@
 .page {
-  min-height: 100vh;
-  background: #f3f4f6;
-  padding: 24px;
-  font-family: "Inter", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
-  color: #111827;
+	min-height: 100vh;
+	background: #f3f4f6;
+	padding: 24px;
+	font-family:
+		"Inter", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+	color: #111827;
 }
 
 .layout {
-  max-width: 960px;
-  margin: 0 auto;
-  display: grid;
-  gap: 24px;
+	max-width: 960px;
+	margin: 0 auto;
+	display: grid;
+	gap: 24px;
 }
 
 .preview {
-  display: grid;
-  gap: 16px;
-  justify-items: center;
+	display: grid;
+	gap: 16px;
+	justify-items: center;
 }
 
 .heading {
-  margin: 0;
-  font-size: 22px;
-  font-weight: 600;
+	margin: 0;
+	font-size: 22px;
+	font-weight: 600;
 }
 
 .panel {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  display: grid;
-  gap: 16px;
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+	background: #ffffff;
+	border-radius: 12px;
+	padding: 20px;
+	display: grid;
+	gap: 16px;
+	box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
 }
 
 .panelHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	flex-wrap: wrap;
 }
 
 .panelTitle {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;
 }
 
 .checkboxRow {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 14px;
 }
 
 .fieldGroup {
-  display: grid;
-  gap: 12px;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #e5e7eb;
-  background: #f9fafb;
-  text-align: left;
-  cursor: pointer;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+	display: grid;
+	gap: 12px;
+	padding: 12px;
+	border-radius: 10px;
+	border: 1px solid #e5e7eb;
+	background: #f9fafb;
+	text-align: left;
+	cursor: pointer;
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease,
+		background 0.2s ease;
 }
 
 .fieldGroup:focus-visible {
-  outline: 2px solid #111827;
-  outline-offset: 2px;
+	outline: 2px solid #111827;
+	outline-offset: 2px;
 }
 
 .fieldGroup:hover {
-  border-color: #9ca3af;
+	border-color: #9ca3af;
 }
 
 .panelGrid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .activeGroup {
-  border-color: #374151;
-  background: #ffffff;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+	border-color: #374151;
+	background: #ffffff;
+	box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
 .groupTitle {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 600;
-  color: #374151;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: space-between;
+	margin: 0;
+	font-size: 14px;
+	font-weight: 600;
+	color: #374151;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	justify-content: space-between;
 }
 
 .activeBadge {
-  font-size: 11px;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: #111827;
-  color: #ffffff;
+	font-size: 11px;
+	font-weight: 600;
+	padding: 2px 8px;
+	border-radius: 999px;
+	background: #111827;
+	color: #ffffff;
 }
 
 .field {
-  display: grid;
-  gap: 6px;
-  font-size: 12px;
-  color: #4b5563;
+	display: grid;
+	gap: 6px;
+	font-size: 12px;
+	color: #4b5563;
 }
 
 .field input,
 .field textarea {
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  padding: 8px 10px;
-  font-size: 14px;
-  color: #111827;
-  font-family: inherit;
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+	padding: 8px 10px;
+	font-size: 14px;
+	color: #111827;
+	font-family: inherit;
 }
 
 .field textarea {
-  min-height: 72px;
-  resize: vertical;
+	min-height: 72px;
+	resize: vertical;
 }
 
 @media (max-width: 860px) {
-  .layout {
-    grid-template-columns: 1fr;
-  }
+	.layout {
+		grid-template-columns: 1fr;
+	}
 }

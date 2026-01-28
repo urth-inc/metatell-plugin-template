@@ -1,8 +1,8 @@
-export { CustomExitScreen, ExitReason } from "./CustomExitScreen";
 export type {
-  CustomExitScreenProps,
-  ExitReasonType,
-  ExitScreenAction,
-  ExitScreenCopy,
-  ExitScreenCopyByReason
+	CustomExitScreenProps,
+	ExitReasonType,
+	ExitScreenAction,
+	ExitScreenCopy,
+	ExitScreenCopyByReason,
 } from "./CustomExitScreen";
+export { CustomExitScreen, ExitReason } from "./CustomExitScreen";
