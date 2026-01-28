@@ -1,8 +1,11 @@
 {
-  "name": "custom-access-denied-screen-template",
-  "description": "A template for creating a custom access denied screen for metatell",
-  "version": "0.0.0",
+  "name": "custom-exit-screen-template",
+  "description": "A template for creating a custom exit screen for metatell",
+  "version": "0.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "dev": "npm run set-uuid && env-cmd -f .uuid.env vite",
     "build": "npm run set-uuid && env-cmd -f .uuid.env vite build",
