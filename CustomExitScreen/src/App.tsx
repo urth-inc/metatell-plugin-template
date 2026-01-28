@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import styles from "./App.module.css";
 import type {
 	ExitReasonType,
-	ExitScreenCopyByReason,
+	ExitScreenContentByReason,
 } from "./components/CustomExitScreen";
 import { CustomExitScreen, ExitReason } from "./components/CustomExitScreen";
 
@@ -103,8 +103,8 @@ export const App: React.FC = () => {
 		setDeniedAnonymousConfig((prev) => ({ ...prev, [field]: value }));
 	};
 
-	const copyByReason = useMemo<ExitScreenCopyByReason>(() => {
-		const result = {} as ExitScreenCopyByReason;
+	const contentByReason = useMemo<ExitScreenContentByReason>(() => {
+		const result = {} as ExitScreenContentByReason;
 		for (const key of Object.keys(configs) as ExitReasonType[]) {
 			if (key === "denied") {
 				const cfg = isSignedIn ? configs.denied : deniedAnonymousConfig;
@@ -202,12 +202,12 @@ export const App: React.FC = () => {
 						<CustomExitScreen
 							reason={reason}
 							isSignedIn={isSignedIn}
-							copyByReason={copyByReason}
+							contentByReason={contentByReason}
 							logoUrl={logoUrl}
 							onPrimaryAction={() => {
-								const copy = copyByReason[reason];
-								if (copy.buttonUrl) {
-									window.location.href = copy.buttonUrl;
+								const content = contentByReason[reason];
+								if (content.buttonUrl) {
+									window.location.href = content.buttonUrl;
 									return;
 								}
 								window.location.reload();

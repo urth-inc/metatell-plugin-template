@@ -14,19 +14,19 @@ export const ExitReason = {
 
 export type ExitReasonType = (typeof ExitReason)[keyof typeof ExitReason];
 
-export type ExitScreenCopy = {
+export type ExitScreenContent = {
 	title: string;
 	message: string;
 	buttonLabel: string;
 	buttonUrl?: string;
 };
 
-export type ExitScreenCopyByReason = Record<ExitReasonType, ExitScreenCopy>;
+export type ExitScreenContentByReason = Record<ExitReasonType, ExitScreenContent>;
 
 export type CustomExitScreenProps = {
 	reason: ExitReasonType;
 	isSignedIn: boolean;
-	copyByReason: ExitScreenCopyByReason;
+	contentByReason: ExitScreenContentByReason;
 	onPrimaryAction: () => void;
 	logoUrl?: string;
 };
@@ -47,24 +47,24 @@ export const mfMeta = {
 
 export const CustomExitScreen: React.FC<CustomExitScreenProps> = ({
 	reason,
-	copyByReason,
+	contentByReason,
 	onPrimaryAction,
 	logoUrl,
 }) => {
-	const copy = copyByReason[reason];
+	const content = contentByReason[reason];
 
 	return (
 		<div className={styles.root} data-reason={reason}>
 			{logoUrl && <img src={logoUrl} alt="Logo" className={styles.logo} />}
 			<section className={styles.container}>
-				<h2 className={styles.title}>{copy.title}</h2>
-				<p className={styles.message}>{copy.message}</p>
+				<h2 className={styles.title}>{content.title}</h2>
+				<p className={styles.message}>{content.message}</p>
 				<button
 					className={styles.button}
 					type="button"
 					onClick={onPrimaryAction}
 				>
-					{copy.buttonLabel}
+					{content.buttonLabel}
 				</button>
 			</section>
 		</div>

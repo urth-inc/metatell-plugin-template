@@ -54,7 +54,7 @@ export type CustomExitScreenProps = {
     | "connectError"
     | "sceneError";
   isSignedIn: boolean;
-  copyByReason: Record<
+  contentByReason: Record<
     CustomExitScreenProps["reason"],
     {
       title: string;
