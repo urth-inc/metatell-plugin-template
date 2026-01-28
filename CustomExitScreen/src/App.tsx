@@ -138,6 +138,9 @@ export const App: React.FC = () => {
 			? {
 					onClick: onSelect,
 					onKeyDown: (e: React.KeyboardEvent) => {
+						if (e.currentTarget !== e.target) {
+							return;
+						}
 						if (e.key === "Enter" || e.key === " ") {
 							e.preventDefault();
 							onSelect();
@@ -201,7 +204,6 @@ export const App: React.FC = () => {
 					<div className={styles.previewCard}>
 						<CustomExitScreen
 							reason={reason}
-							isSignedIn={isSignedIn}
 							contentByReason={contentByReason}
 							logoUrl={logoUrl}
 							onPrimaryAction={() => {

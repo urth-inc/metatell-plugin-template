@@ -25,7 +25,6 @@ export type ExitScreenContentByReason = Record<ExitReasonType, ExitScreenContent
 
 export type CustomExitScreenProps = {
 	reason: ExitReasonType;
-	isSignedIn: boolean;
 	contentByReason: ExitScreenContentByReason;
 	onPrimaryAction: () => void;
 	logoUrl?: string;

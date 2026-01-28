@@ -53,7 +53,6 @@ export type CustomExitScreenProps = {
     | "left"
     | "connectError"
     | "sceneError";
-  isSignedIn: boolean;
   contentByReason: Record<
     CustomExitScreenProps["reason"],
     {
