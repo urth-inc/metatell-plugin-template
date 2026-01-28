@@ -16,64 +16,64 @@ type ReasonConfig = {
 
 const defaultConfigs: Record<ExitReasonType, ReasonConfig> = {
 	exited: {
-		title: "退出しました",
-		message: "ルームを退出しました。",
-		buttonLabel: "再読み込み",
+		title: "You left the room",
+		message: "You have left the room.",
+		buttonLabel: "Reload",
 		buttonUrl: "",
 	},
 	left: {
-		title: "退出しました",
-		message: "ルームを退出しました。",
-		buttonLabel: "再読み込み",
+		title: "You left the room",
+		message: "You have left the room.",
+		buttonLabel: "Reload",
 		buttonUrl: "",
 	},
 	closed: {
-		title: "ルームはクローズされました",
-		message: "管理者がルームをクローズしました。",
-		buttonLabel: "ホームへ",
+		title: "Room closed",
+		message: "The host closed the room.",
+		buttonLabel: "Go to Home",
 		buttonUrl: "/",
 	},
 	denied: {
-		title: "入室権限がありません",
+		title: "Access denied",
 		message: "",
-		buttonLabel: "トップページへ戻る",
+		buttonLabel: "Back to Top",
 		buttonUrl: "https://example.com",
 	},
 	kicked: {
-		title: "ルームから退出させられました",
-		message: "管理者によって退出させられました。",
-		buttonLabel: "ホームへ",
+		title: "You were removed from the room",
+		message: "The host removed you from the room.",
+		buttonLabel: "Go to Home",
 		buttonUrl: "/",
 	},
 	connectError: {
-		title: "接続エラー",
-		message: "接続に失敗しました。",
-		buttonLabel: "再試行",
+		title: "Connection error",
+		message: "Failed to connect.",
+		buttonLabel: "Retry",
 		buttonUrl: "",
 	},
 	sceneError: {
-		title: "シーンエラー",
-		message: "シーンの読み込みに失敗しました。",
-		buttonLabel: "再読み込み",
+		title: "Scene error",
+		message: "Failed to load the scene.",
+		buttonLabel: "Reload",
 		buttonUrl: "",
 	},
 };
 
 const defaultDeniedAnonymous: ReasonConfig = {
-	title: "このルームへの入室は制限されています",
+	title: "This room requires sign-in",
 	message: "",
-	buttonLabel: "ログインする",
+	buttonLabel: "Sign in",
 	buttonUrl: "https://example.com/signin",
 };
 
 const reasonLabels: Record<ExitReasonType, string> = {
-	exited: "Exited (フォールバック)",
-	left: "Left (退室)",
-	closed: "Closed (ルームクローズ)",
-	denied: "Denied (入室拒否)",
-	kicked: "Kicked (キック)",
-	connectError: "Connect Error (接続エラー)",
-	sceneError: "Scene Error (シーンエラー)",
+	exited: "Exited (fallback)",
+	left: "Left",
+	closed: "Closed",
+	denied: "Denied",
+	kicked: "Kicked",
+	connectError: "Connection Error",
+	sceneError: "Scene Error",
 };
 
 export const App: React.FC = () => {
