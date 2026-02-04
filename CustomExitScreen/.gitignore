@@ -1,0 +1,32 @@
+# Build output
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# Environment
+.uuid.env
+
+# Module Federation temp
+.__mf__temp/
+__mf__temp/
+
+# Editor
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+
+# Logs
+*.log*
+
+# Coverage
+coverage/
