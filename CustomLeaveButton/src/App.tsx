@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomLeaveButton } from "./components/CustomLeaveButton";
 
-import * as styles from "./App.module.scss";
+import styles from "./App.module.scss";
 
 const App: React.FC = () => {
   return (

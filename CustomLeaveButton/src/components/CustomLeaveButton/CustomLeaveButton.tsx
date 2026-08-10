@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { CustomLeaveModal } from "../CustomLeaveModal";
 import { SampleIcon } from "./SampleIcon";
-import * as styles from "./CustomLeaveButton.module.scss";
+import styles from "./CustomLeaveButton.module.scss";
 
 interface CustomLeaveButtonProps {
   showDefaultModal: () => void;

@@ -1,16 +1,16 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import "@testing-library/jest-dom";
-
 import { CustomOverlay } from "./CustomOverlay";
-import * as styles from "./CustomOverlay.module.scss";
+import styles from "./CustomOverlay.module.scss";
 
-jest.mock("./CustomOverlay.module.scss", () => ({
-  customOverlayContainer: "customOverlayContainer",
-  sampleOverlay1: "sampleOverlay1",
-  overlayWrapper: "overlayWrapper",
-  sampleOverlay2: "sampleOverlay2",
-  sampleOverlay3: "sampleOverlay3",
+vi.mock("./CustomOverlay.module.scss", () => ({
+  default: {
+    customOverlayContainer: "customOverlayContainer",
+    sampleOverlay1: "sampleOverlay1",
+    overlayWrapper: "overlayWrapper",
+    sampleOverlay2: "sampleOverlay2",
+    sampleOverlay3: "sampleOverlay3",
+  },
 }));
 
 describe("CustomOverlay", () => {

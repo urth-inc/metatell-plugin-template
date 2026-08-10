@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomChatButton } from "./components/CustomChatButton";
 
-import * as styles from "./App.module.scss";
+import styles from "./App.module.scss";
 
 const App: React.FC = () => {
   return (

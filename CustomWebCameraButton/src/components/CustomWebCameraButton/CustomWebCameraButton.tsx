@@ -5,7 +5,7 @@ import { VideoDisabledIcon } from "./VideoDisabledIcon";
 import { VideoEnabledIcon } from "./VideoEnabledIcon";
 import { AvatarCameraIcon } from "./AvatarCameraIcon";
 import { CameraIcon } from "./CameraIcon";
-import * as styles from "./CustomWebCameraButton.module.scss";
+import styles from "./CustomWebCameraButton.module.scss";
 
 interface CustomWebCameraButtonProps {
   isSharingCamera: boolean;

@@ -1,2 +1,1 @@
-import("./bootstrap");
-export {};
+export { CustomTutorial } from "./components/CustomTutorial";

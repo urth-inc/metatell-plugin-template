@@ -1,2 +1,1 @@
-import("./bootstrap");
-export {};
+export { CustomNearestUserProfile } from "./components/CustomNearestUserProfile";

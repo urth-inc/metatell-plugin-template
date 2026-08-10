@@ -1,2 +1,1 @@
-import("./bootstrap");
-export {};
+export { CustomMegaphoneButton } from "./components/CustomMegaphoneButton";

@@ -2,7 +2,7 @@ import React from "react";
 
 import emoji0 from "../../images/emoji0.png";
 
-import * as commonStyles from "./common.module.scss";
+import commonStyles from "./common.module.scss";
 import { useReactionTutorial2 } from "./useReactionTutorial2";
 
 type Props = {

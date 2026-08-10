@@ -1,15 +1,23 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 
-import * as styles from "./CustomChatModal.module.scss";
+import styles from "./CustomChatModal.module.scss";
 
 Modal.setAppElement("#ui-root");
+
+type MessageGroup = {
+  type: string;
+  messages?: {
+    body: string;
+    timestamp: number;
+  }[];
+};
 
 type Props = {
   modalIsOpen: boolean;
   closeModal: () => void;
   sendMessage: (message: string) => void;
-  MessageGroups: any[]; // TODO: Define the type
+  messageGroups: MessageGroup[];
   canSpawnMessages: boolean;
   onUploadFiles: (event: React.ChangeEvent<HTMLInputElement>) => void;
   spawnChatMessage: (message: string) => void;

@@ -2,9 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { CustomLeaveButton } from "./CustomLeaveButton";
 
-import "@testing-library/jest-dom";
-
-jest.mock("../CustomLeaveModal", () => ({
+vi.mock("../CustomLeaveModal", () => ({
   CustomLeaveModal: ({
     modalIsOpen,
     closeModal,
@@ -23,14 +21,16 @@ jest.mock("../CustomLeaveModal", () => ({
   ),
 }));
 
-jest.mock("./SampleIcon", () => ({
+vi.mock("./SampleIcon", () => ({
   SampleIcon: () => <div data-testid="sample-icon">Sample Icon</div>,
 }));
 
-jest.mock("./CustomLeaveButton.module.scss", () => ({
-  customLeaveButtonContainer: "customLeaveButtonContainer",
-  sampleIconContainer: "sampleIconContainer",
-  customLeaveButtonLabel: "customLeaveButtonLabel",
+vi.mock("./CustomLeaveButton.module.scss", () => ({
+  default: {
+    customLeaveButtonContainer: "customLeaveButtonContainer",
+    sampleIconContainer: "sampleIconContainer",
+    customLeaveButtonLabel: "customLeaveButtonLabel",
+  },
 }));
 
 describe("CustomLeaveButton", () => {

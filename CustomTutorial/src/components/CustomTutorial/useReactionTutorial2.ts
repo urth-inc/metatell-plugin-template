@@ -27,7 +27,7 @@ export const useReactionTutorial2 = ({
     setReactionIcon(element);
 
     const observer = new MutationObserver(() => {
-      const updatedElement = document.querySelector(
+      const updatedElement = document.querySelector<HTMLElement>(
         "[data-mt='ReactionIcon-0']",
       );
       setReactionIcon(updatedElement);

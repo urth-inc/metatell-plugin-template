@@ -12,7 +12,8 @@ This is a template for creating a CustomProfileModal for `metatell`.
 
 - `npm run dev`: Start the development server
 - `npm run build`: Build the project
-- `npm run test`: Run unit tests
+- `npm run preview`: Preview the production build locally
+- `npm run test`: Run unit tests (vitest)
 - `npm run lint`: Run all lint check
 - `npm run lint:tsc`: Run code check based on tsc
 - `npm run lint:prettier`: Run code check based on prettier
@@ -114,7 +115,7 @@ You can upload the plugin from `metatell-admin` dashboard.
 - Do not use default export. export Component as named export
 - Component name should be `CustomProfileModal`
 - component should be placed in `src/CustomProfileModal` directory
-  - You can change the directory to update federation config in `/configs/federationConfig.js`
+  - You can change the directory to update federation config in `vite.config.ts`
 
 ### Styling
 

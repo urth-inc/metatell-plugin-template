@@ -28,7 +28,8 @@ CustomOverlay has no props.
 
 - `npm run dev`: Start the development server
 - `npm run build`: Build the project
-- `npm run test`: Run unit tests
+- `npm run preview`: Preview the production build locally
+- `npm run test`: Run unit tests (vitest)
 - `npm run lint`: Run all lint check
 - `npm run lint:tsc`: Run code check based on tsc
 - `npm run lint:prettier`: Run code check based on prettier
@@ -92,7 +93,7 @@ You can upload the plugin from `metatell-admin` dashboard.
 - do not use default export. export Component as named export
 - component name should be `CustomOverlay`
 - component should be placed in `src/CustomOverlay` directory
-  - You can change the directory by updating federation config in `/configs/federationConfig.js`
+  - You can change the directory by updating federation config in `vite.config.ts`
 
 ### Styling ecosystem
 

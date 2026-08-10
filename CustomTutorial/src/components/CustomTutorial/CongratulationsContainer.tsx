@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as commonStyles from "./common.module.scss";
+import commonStyles from "./common.module.scss";
 import { useCongratulations } from "./useCongratulations";
 
 type Props = {

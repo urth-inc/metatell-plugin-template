@@ -1,2 +1,1 @@
-import("./bootstrap");
-export {};
+export { AdditionalToolbarButton } from "./components/AdditionalToolbarButton";

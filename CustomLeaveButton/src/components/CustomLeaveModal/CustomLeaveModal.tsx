@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 
-import * as styles from "./CustomLeaveModal.module.scss";
+import styles from "./CustomLeaveModal.module.scss";
 
 Modal.setAppElement("#ui-root");
 

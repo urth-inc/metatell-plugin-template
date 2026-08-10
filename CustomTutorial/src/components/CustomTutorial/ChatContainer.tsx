@@ -2,8 +2,8 @@ import React from "react";
 
 import { ChatIcon } from "./icons/ChatIcon";
 
-import * as styles from "./ChatContainer.module.scss";
-import * as commonStyles from "./common.module.scss";
+import styles from "./ChatContainer.module.scss";
+import commonStyles from "./common.module.scss";
 import { useChatTutorial } from "./useChatTutorial";
 
 type Props = {

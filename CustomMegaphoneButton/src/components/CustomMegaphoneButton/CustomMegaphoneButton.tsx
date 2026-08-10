@@ -5,7 +5,7 @@ import { Tooltip } from "react-tooltip";
 import { MegaphoneIcon } from "../MegaphoneIcon";
 import { OffMegaphoneIcon } from "../OffMegaphoneIcon";
 
-import * as styles from "./CustomMegaphoneButton.module.scss";
+import styles from "./CustomMegaphoneButton.module.scss";
 import { useMegaphoneMessage } from "./useMegaphoneMessage";
 
 type Props = {

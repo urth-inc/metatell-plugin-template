@@ -1,0 +1,10 @@
+{
+  "latestErrorEvent": {
+    "code": "TYPE-001",
+    "message": "Failed to generate type declaration. Execute the below cmd to reproduce and fix the error. #TYPE-001\nargs: {\"cmd\":\"/Users/kira/.vite-plus/js_runtime/node/24.19.0/bin/node /Users/kira/work/urth/metatell-plugin-template/CustomChatButton/node_modules/typescript/bin/tsc --project /Users/kira/work/urth/metatell-plugin-template/CustomChatButton/node_modules/.federation/tsconfig.9664bc468283f8abb41902b65ee05aa7.json\"}\nView the docs to see how to solve: https://module-federation.io/guide/troubleshooting/type#type-001",
+    "args": {
+      "cmd": "/Users/kira/.vite-plus/js_runtime/node/24.19.0/bin/node /Users/kira/work/urth/metatell-plugin-template/CustomChatButton/node_modules/typescript/bin/tsc --project /Users/kira/work/urth/metatell-plugin-template/CustomChatButton/node_modules/.federation/tsconfig.9664bc468283f8abb41902b65ee05aa7.json"
+    },
+    "timestamp": 1786344080520
+  }
+}

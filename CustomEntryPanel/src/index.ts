@@ -1,2 +1,1 @@
-import("./bootstrap");
-export {};
+export { CustomEntryPanel } from "./components/CustomEntryPanel";

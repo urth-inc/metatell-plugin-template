@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { useCssBreakpoints } from "react-use-css-breakpoints"
-import * as styles from "./CustomEntryPanel.module.scss";
+import styles from "./CustomEntryPanel.module.scss";
 
 interface CustomEntryPanelProps {
   roomName: string | undefined;

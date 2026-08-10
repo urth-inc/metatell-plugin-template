@@ -1,7 +1,7 @@
 import React from "react";
 
-import * as styles from "./ReactionContainer.module.scss";
-import * as commonStyles from "./common.module.scss";
+import styles from "./ReactionContainer.module.scss";
+import commonStyles from "./common.module.scss";
 import { useReactionTutorial } from "./useReactionTutorial";
 import { ReactionIcon } from "./icons/ReactionIcon";
 

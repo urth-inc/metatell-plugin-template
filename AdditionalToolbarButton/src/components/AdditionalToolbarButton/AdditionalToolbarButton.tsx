@@ -1,6 +1,7 @@
 import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import "normalize.css";
 import "./styles/global.module.scss";
 
 import { ToolbarButton } from "./ToolbarButton";
