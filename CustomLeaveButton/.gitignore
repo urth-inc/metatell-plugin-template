@@ -9,6 +9,7 @@ node_modules/
 .uuid.env
 
 # Module Federation temp
+.mf/
 .__mf__temp/
 __mf__temp/
 
