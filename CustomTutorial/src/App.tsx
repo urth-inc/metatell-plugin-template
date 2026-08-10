@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomTutorial } from "./components/CustomTutorial";
 
-import * as styles from "./App.module.scss";
+import styles from "./App.module.scss";
 
 const tutorialProps = {
   showMicrophone: true,

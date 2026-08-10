@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomWebCameraButton } from "./components/CustomWebCameraButton";
 
-import * as styles from "./App.module.scss";
+import styles from "./App.module.scss";
 
 const App: React.FC = () => {
   const dummyProps = {

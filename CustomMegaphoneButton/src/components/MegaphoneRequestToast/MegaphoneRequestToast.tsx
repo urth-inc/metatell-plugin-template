@@ -1,7 +1,7 @@
 import React from "react";
 import { toast } from "react-toastify";
 
-import * as styles from "./MegaphoneRequestToast.module.scss";
+import styles from "./MegaphoneRequestToast.module.scss";
 
 type Props = {
   name: string;

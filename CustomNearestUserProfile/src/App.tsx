@@ -2,7 +2,7 @@ import React from "react";
 
 import { CustomNearestUserProfile } from "./components/CustomNearestUserProfile";
 
-import * as styles from "./App.module.scss";
+import styles from "./App.module.scss";
 import sampleImage from "./assets/penguin.png";
 
 import type { User } from "./types/user";

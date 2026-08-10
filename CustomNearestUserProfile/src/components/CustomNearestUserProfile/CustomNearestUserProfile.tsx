@@ -5,7 +5,7 @@ import { CustomMinimizedNearestUserProfileIcon } from "../CustomMinimizedNearest
 import { MinusIcon } from "./MinusSolid";
 
 import { useCustomNearestUserProfile } from "./useCustomNearestUserProfile";
-import * as styles from "./CustomNearestUserProfile.module.scss";
+import styles from "./CustomNearestUserProfile.module.scss";
 
 import type { User } from "../../types/user";
 
@@ -25,11 +25,7 @@ export const CustomNearestUserProfile: React.FC<Props> = ({ user }) => {
         onClick={openModal}
         showSpeakerIcon={minimized}
       />
-      <div
-        className={classNames(styles.infoModal, {
-          [styles.hide]: minimized,
-        })}
-      >
+      <div className={classNames(styles.infoModal, minimized && styles.hide)}>
         <button className={styles.minimizeButton} onClick={minimizeModal}>
           <MinusIcon />
         </button>

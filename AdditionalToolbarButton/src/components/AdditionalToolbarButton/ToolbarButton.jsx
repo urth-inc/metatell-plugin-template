@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import React, { forwardRef } from "react";
-import * as styles from "./ToolbarButton.module.scss";
+import styles from "./ToolbarButton.module.scss";
 
 export const presets = [
   "basic",
@@ -22,7 +22,30 @@ export const types = ["none", "left", "middle", "right"];
 
 export const statusColors = ["recording", "unread", "enabled", "disabled"];
 
+/**
+ * @typedef {object} ToolbarButtonOwnProps
+ * @property {React.ReactNode} [icon]
+ * @property {React.ReactNode} [label]
+ * @property {boolean} [selected]
+ * @property {boolean} [large]
+ * @property {(typeof presets)[number]} [preset]
+ * @property {(typeof statusColors)[number]} [statusColor]
+ * @property {(typeof types)[number]} [type]
+ * @property {string} [className]
+ * @property {string} [iconContainerClassName]
+ * @property {React.ReactNode} [children]
+ */
+
+/**
+ * @typedef {ToolbarButtonOwnProps &
+ *   Omit<React.ComponentPropsWithoutRef<"button">, "type">} ToolbarButtonProps
+ */
+
 export const ToolbarButton = forwardRef(
+  /**
+   * @param {ToolbarButtonProps} props
+   * @param {React.Ref<HTMLButtonElement>} ref
+   */
   (
     {
       preset,

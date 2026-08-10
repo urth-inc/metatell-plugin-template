@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomEntryPanel } from "./components/CustomEntryPanel";
 
-import * as styles from "./App.module.scss";
+import styles from "./App.module.scss";
 
 const App: React.FC = () => {
   const dummyProps = {

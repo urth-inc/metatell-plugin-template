@@ -6,7 +6,7 @@ import { CloseButton } from "./CloseButton";
 import { CompressButton } from "./CompressButton";
 import { ExpandButton } from "./ExpandButton";
 
-import * as styles from "./Modal.module.scss";
+import styles from "./Modal.module.scss";
 
 export type ModalProps = {
   isOpen: boolean;

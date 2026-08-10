@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomProfileModal } from "./components/CustomProfileModal";
 
-import * as styles from "./App.module.scss";
+import styles from "./App.module.scss";
 
 const App: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);

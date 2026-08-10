@@ -12,6 +12,7 @@ This is a template for creating an additional toolbar button for metatell.
 
 - `npm run dev`: Start the development server
 - `npm run build`: Build the project
+- `npm run preview`: Preview the production build locally
 - `npm run lint`: Run all lint check
 - `npm run lint:tsc`: Run code check based on tsc
 - `npm run lint:prettier`: Run code check based on prettier
@@ -75,7 +76,7 @@ You can upload the plugin from metatell-admin dashborad.
 - Do not use default export. export Component as named export
 - Component name should be `AdditionalToolbarButton`
 - component should be placed in `src/AdditionalToolbarButton` directory
-  - You can change the directory to update federation config in `/configs/federationConfig.js`
+  - You can change the directory to update federation config in `vite.config.ts`
 
 ### Styling
 

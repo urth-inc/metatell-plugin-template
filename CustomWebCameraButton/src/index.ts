@@ -1,2 +1,1 @@
-import("./bootstrap");
-export {};
+export { CustomWebCameraButton } from "./components/CustomWebCameraButton";

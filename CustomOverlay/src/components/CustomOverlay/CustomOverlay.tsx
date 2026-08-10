@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as styles from "./CustomOverlay.module.scss";
+import styles from "./CustomOverlay.module.scss";
 
 interface CustomOverlayProps {}
 

@@ -3,8 +3,8 @@ import React from "react";
 import { MicrophoneIcon } from "./icons/MicrophoneIcon";
 import { MicrophoneMutedIcon } from "./icons/MicrophoneMutedIcon";
 
-import * as styles from "./MicrophoneContainer.module.scss";
-import * as commonStyles from "./common.module.scss";
+import styles from "./MicrophoneContainer.module.scss";
+import commonStyles from "./common.module.scss";
 import { useMicrophoneTutorial } from "./useMicrophoneTutorial";
 
 type Props = {

@@ -8,3 +8,6 @@ dist
 
 # ignore .env files
 .env
+
+# ignore macOS metadata files
+.DS_Store

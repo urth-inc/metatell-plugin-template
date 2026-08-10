@@ -1,7 +1,13 @@
-const path = require("path");
-const fs = require("fs");
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
 const { name, version, description } = require("../package.json");
-const process = require("process");
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const versionId = process.env.VERSION_ID;
 
@@ -12,15 +18,11 @@ const metadata = {
   type: "CustomLeaveButton",
   versionId,
 };
+
 const jsonData = JSON.stringify(metadata, null, 2);
 
 const directoryPath = path.resolve(__dirname, "../", "dist");
 const filePath = path.join(directoryPath, "metadata.json");
 
-fs.writeFile(filePath, jsonData, "utf8", (err) => {
-  if (err) {
-    console.error(`Error writing file: ${err}`);
-  } else {
-    console.log("JSON data has been written to the file successfully.");
-  }
-});
+fs.writeFileSync(filePath, jsonData, "utf8");
+console.log("metadata.json has been written successfully.");

@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 import { SpeakerIcon } from "./SpeakerIcon";
 
-import * as styles from "./CustomMinimizedNearestUserProfileIcon.module.scss";
+import styles from "./CustomMinimizedNearestUserProfileIcon.module.scss";
 
 type Props = {
   onClick: () => void;
@@ -16,9 +16,10 @@ export const CustomMinimizedNearestUserProfileIcon: React.FC<Props> = ({
 }) => {
   return (
     <button
-      className={classNames(styles.menuButtonContainer, {
-        [styles.hidden]: !showSpeakerIcon,
-      })}
+      className={classNames(
+        styles.menuButtonContainer,
+        !showSpeakerIcon && styles.hidden,
+      )}
       onClick={onClick}
     >
       <SpeakerIcon />

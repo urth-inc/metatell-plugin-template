@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { CustomMegaphoneButton } from "./components/CustomMegaphoneButton";
 
-import * as styles from "./App.module.scss";
+import styles from "./App.module.scss";
 
 const App: React.FC = () => {
   const [isActiveMegaphone, setIsActiveMegaphone] = React.useState(false);

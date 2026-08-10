@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { CustomChatModal } from "../CustomChatModal";
 import { SampleIcon } from "./SampleIcon";
-import * as styles from "./CustomChatButton.module.scss";
+import styles from "./CustomChatButton.module.scss";
 
 type MessageGroup = {
   id: number;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 
-import * as styles from "./CustomProfileModal.module.scss";
+import styles from "./CustomProfileModal.module.scss";
 
 Modal.setAppElement("#ui-root");
 

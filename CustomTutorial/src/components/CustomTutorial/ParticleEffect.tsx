@@ -7,11 +7,13 @@ type Props = {
   option: "single" | "flow";
 };
 
-const singleConfettiOptions = {
+type ParticlesOptions = React.ComponentProps<typeof Particles>["options"];
+
+const singleConfettiOptions: ParticlesOptions = {
   preset: "confetti",
 };
 
-const flowConfettiOptions = {
+const flowConfettiOptions: ParticlesOptions = {
   fullScreen: {
     zIndex: 1,
   },

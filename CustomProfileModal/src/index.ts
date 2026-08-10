@@ -1,2 +1,1 @@
-import("./bootstrap");
-export {};
+export { CustomProfileModal } from "./components/CustomProfileModal";
