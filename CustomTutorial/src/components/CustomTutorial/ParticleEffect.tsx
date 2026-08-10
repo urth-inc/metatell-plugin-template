@@ -1,7 +1,9 @@
 import { loadConfettiPreset } from "@tsparticles/preset-confetti";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
+import Particles, {
+	ParticlesProvider,
+	useParticlesProvider,
+} from "@tsparticles/react";
 import type React from "react";
-import { useEffect, useState } from "react";
 
 type Props = {
 	show: boolean;
@@ -115,23 +117,35 @@ const flowConfettiOptions: ParticlesOptions = {
 	},
 };
 
+const registerConfettiPreset = async (
+	engine: Parameters<React.ComponentProps<typeof ParticlesProvider>["init"]>[0],
+) => {
+	await loadConfettiPreset(engine);
+};
+
+/** Renders only once ParticlesProvider has finished loading the preset. */
+const ConfettiParticles: React.FC<{ options: ParticlesOptions }> = ({
+	options,
+}) => {
+	const { loaded } = useParticlesProvider();
+
+	return loaded ? <Particles id="tsparticles" options={options} /> : null;
+};
+
 export const ParticleEffect: React.FC<Props> = ({
 	show = false,
 	option = "single",
 }: Props) => {
-	const [init, setInit] = useState<boolean>(false);
 	const options =
 		option === "single" ? singleConfettiOptions : flowConfettiOptions;
 
-	useEffect(() => {
-		initParticlesEngine(async (engine) => {
-			await loadConfettiPreset(engine);
-		}).then(() => {
-			setInit(true);
-		});
-	}, []);
+	if (!show) {
+		return null;
+	}
 
 	return (
-		<>{init && show && <Particles id="tsparticles" options={options} />}</>
+		<ParticlesProvider init={registerConfettiPreset}>
+			<ConfettiParticles options={options} />
+		</ParticlesProvider>
 	);
 };
