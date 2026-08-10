@@ -1,6 +1,6 @@
 import type React from "react";
 import { useEffect, useState } from "react";
-import Joyride from "react-joyride";
+import { Joyride } from "react-joyride";
 
 import { ChatContainer } from "./ChatContainer";
 import { CongratulationsContainer } from "./CongratulationsContainer";
@@ -96,25 +96,21 @@ export const CustomTutorial: React.FC<Props> = ({
 		<div data-mt="TutorialContainer">
 			<Joyride
 				run={run && numberOfSteps > 0}
-				hideCloseButton
-				floaterProps={{ hideArrow: true }}
-				styles={{
-					options: {
-						backgroundColor: "#121212",
-						arrowColor: "#FFF",
-						textColor: "white",
-					},
-					buttonNext: {
-						display: "none",
-					},
+				floatingOptions={{ hideArrow: true }}
+				options={{
+					backgroundColor: "#121212",
+					arrowColor: "#FFF",
+					textColor: "white",
+					// The tour advances when the user performs the action, so no
+					// back / close / next buttons are shown.
+					buttons: [],
+					hideOverlay: true,
+					overlayClickAction: false,
+					dismissKeyAction: false,
 				}}
 				steps={steps}
 				stepIndex={stepIndex}
 				continuous={true}
-				disableOverlay={true}
-				disableCloseOnEsc={true}
-				disableOverlayClose={true}
-				hideBackButton={true}
 			/>
 			<ParticleEffect show={showEffect} option={effectOption} />
 		</div>

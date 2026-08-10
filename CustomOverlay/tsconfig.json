@@ -6,7 +6,6 @@
       "DOM.Iterable",
       "ES2020"
     ],
-    "baseUrl": "./",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
