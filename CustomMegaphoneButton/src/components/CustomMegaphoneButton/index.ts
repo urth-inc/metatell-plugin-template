@@ -1,1 +1,1 @@
-export { CustomMegaphoneButton } from "./CustomMegaphoneButton"
+export { CustomMegaphoneButton } from "./CustomMegaphoneButton";
