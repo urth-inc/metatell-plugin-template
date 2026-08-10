@@ -21,7 +21,10 @@ export type ExitScreenContent = {
 	buttonUrl?: string;
 };
 
-export type ExitScreenContentByReason = Record<ExitReasonType, ExitScreenContent>;
+export type ExitScreenContentByReason = Record<
+	ExitReasonType,
+	ExitScreenContent
+>;
 
 export type CustomExitScreenProps = {
 	reason: ExitReasonType;

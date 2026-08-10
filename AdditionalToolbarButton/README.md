@@ -15,11 +15,8 @@ This is a template for creating an additional toolbar button for metatell.
 - `npm run preview`: Preview the production build locally
 - `npm run lint`: Run all lint check
 - `npm run lint:tsc`: Run code check based on tsc
-- `npm run lint:prettier`: Run code check based on prettier
-- `npm run lint:eslint`: Run code check based on eslint
-- `npm run lint-fix`: Run all code fix
-- `npm run lint-fix:prettier`: Run code fix based on prettier
-- `npm run lint-fix:eslint`: Run code fix based on eslint
+- `npm run lint:biome`: Run code check based on biome
+- `npm run lint-fix`: Run code fix based on biome
 
 ## How to develop
 
