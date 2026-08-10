@@ -37,7 +37,7 @@ export default defineConfig(({ command }) => ({
     emptyOutDir: true
   },
   server: {
-    port: 5173,
+    port: 3004,
     strictPort: true,
     headers: {
       "Access-Control-Allow-Origin": "*"

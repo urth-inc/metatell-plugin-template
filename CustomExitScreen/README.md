@@ -13,7 +13,7 @@ npm install
 npm run dev
 ```
 
-The dev server runs at `http://localhost:5173`.
+The dev server runs at `http://localhost:3004`.
 
 ## Build
 
