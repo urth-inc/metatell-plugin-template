@@ -15,7 +15,7 @@ Bellow screenshot are the example of custom overlay:
 ## Interface
 
 ```tsx
-interface CustomOverlayProps {}
+type CustomOverlayProps = {};
 ```
 
 CustomOverlay has no props.

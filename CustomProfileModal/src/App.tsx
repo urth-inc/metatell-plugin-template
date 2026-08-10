@@ -8,6 +8,7 @@ const App: React.FC = () => {
 		isOpen,
 		onClose: () => setIsOpen(false),
 		displayName: "John Doe",
+		bio: "Hello, I'm John Doe.",
 		avatarId: "1",
 		avatarThumbnailUrl: undefined,
 		selectedAvatarId: "1",

@@ -5,6 +5,8 @@ import { CustomEntryPanel } from "./components/CustomEntryPanel";
 const App: React.FC = () => {
 	const dummyProps = {
 		roomName: "Room Name",
+		logoUrl:
+			"https://r2.u-rth.win/room-entrance-files/893e4f7d-43b2-4efd-be29-6bd695841a3c.jpeg",
 		showJoinRoom: true,
 		isRoomFull: false,
 		onJoinRoom: () => {
