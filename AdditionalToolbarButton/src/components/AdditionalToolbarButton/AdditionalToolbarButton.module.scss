@@ -1,0 +1,63 @@
+:local(.button) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 42px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-size: 8px;
+  pointer-events: auto;
+}
+
+:local(.icon) {
+  display: flex;
+  flex: none;
+  width: 42px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+:local(.icon-mark) {
+  box-sizing: border-box;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentcolor;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 1;
+}
+
+:local(.label) {
+  width: 100%;
+  height: 8px;
+  margin: 4px 0 2px;
+  overflow: hidden;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:local(.button):hover :local(.icon-mark),
+:local(.button):focus-visible :local(.icon-mark) {
+  background: color-mix(in srgb, currentcolor 15%, transparent);
+}
+
+:local(.button):focus-visible {
+  outline: 2px solid currentcolor;
+  outline-offset: 2px;
+}
