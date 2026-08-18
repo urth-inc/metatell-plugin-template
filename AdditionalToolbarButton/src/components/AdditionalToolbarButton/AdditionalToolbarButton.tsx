@@ -1,53 +1,21 @@
-import { faQuestion } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
-import "normalize.css";
-import "./styles/global.module.scss";
+import styles from "./AdditionalToolbarButton.module.scss";
 
-import type { IconProp } from "@fortawesome/fontawesome-svg-core";
-
-import { IframeModal } from "./IframeModal";
-import { ToolbarButton } from "./ToolbarButton";
-
-type IframeModalToolbarButtonProps = {
-	onClick: () => void;
-	label: string;
+type AdditionalToolbarButtonProps = {
+	label?: string;
+	onClick?: () => void;
 };
 
-const IframeModalToolbarButton = (props: IframeModalToolbarButtonProps) => {
+/** A minimal button intended to be placed in the metatell toolbar. */
+export const AdditionalToolbarButton = ({
+	label = "追加",
+	onClick = () => window.alert("追加ボタンがクリックされました"),
+}: AdditionalToolbarButtonProps) => {
 	return (
-		<ToolbarButton
-			onClick={props.onClick}
-			icon={
-				<FontAwesomeIcon
-					icon={faQuestion as IconProp}
-					style={{
-						width: "24px",
-						height: "24px",
-					}}
-				/>
-			}
-			preset="accent4"
-			label={props.label}
-		/>
-	);
-};
-
-export const AdditionalToolbarButton = () => {
-	const [isModalOpen, setIsModalOpen] = useState(false);
-
-	const handleOpenModal = () => {
-		setIsModalOpen(true);
-	};
-
-	const handleCloseModal = () => {
-		setIsModalOpen(false);
-	};
-
-	return (
-		<div>
-			<IframeModalToolbarButton onClick={handleOpenModal} label="ヘルプ" />
-			{isModalOpen && <IframeModal onClose={handleCloseModal} />}
-		</div>
+		<button className={styles.button} onClick={onClick} type="button">
+			<span aria-hidden="true" className={styles.icon}>
+				<span className={styles.iconMark}>+</span>
+			</span>
+			<span className={styles.label}>{label}</span>
+		</button>
 	);
 };

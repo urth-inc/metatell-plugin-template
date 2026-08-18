@@ -2,7 +2,10 @@
 
 ## Description
 
-This is a template for creating an additional toolbar button for metatell.
+This is a minimal template for creating an additional toolbar button for metatell.
+The exported component renders one native button. It shows an alert by default
+so that the click behavior can be verified after installing the plugin. Pass
+`label` and `onClick` to customize its text and behavior.
 
 ## Pre-requisites
 
@@ -80,4 +83,3 @@ You can upload the plugin from metatell-admin dashborad.
 You can use CSS Modules without any additional configuration.
 
 If you want to use different styling systems like styled-components, you can do so by installing the required packages.
-

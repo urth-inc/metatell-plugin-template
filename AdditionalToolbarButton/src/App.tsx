@@ -1,8 +1,7 @@
-import type React from "react";
 import styles from "./App.module.scss";
 import { AdditionalToolbarButton } from "./components/AdditionalToolbarButton";
 
-const App: React.FC = () => {
+const App = () => {
 	return (
 		<div className={styles.appContainer}>
 			<h2 className={styles.appHeadingContainer}>
