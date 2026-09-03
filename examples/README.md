@@ -1,4 +1,4 @@
-# Plugin examples
+# Examples
 
 This directory contains runnable reference implementations for metatell plugin
 use cases.
