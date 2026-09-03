@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, createRoot } from 'react-dom/client';
+import { type Container, createRoot } from "react-dom/client";
 
 import App from "./App";
 
@@ -8,5 +8,5 @@ const root = createRoot(remoteElement as Container);
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
