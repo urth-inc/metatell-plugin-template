@@ -1,87 +1,84 @@
-# metatell plugin template
+# metatell plugins
 
-This repository is to showcase examples of how to create plugins for metatell.
+This repository contains templates and runnable examples for developing plugins
+for metatell. The plugin frontends are written in TypeScript and React.
 
-All examples are written in TypeScript and React.
+## Repository layout
 
-## How to use the plugin template
+- [`templates`](./templates) contains copyable starter projects for each
+  supported plugin type.
+- [`examples`](./examples) contains runnable reference implementations for
+  specific use cases.
 
-1. Clone this repository
+Each project is self-contained and has its own package manager configuration and
+README. This repository intentionally does not define a root package-manager
+workspace.
 
-You can clone this repository by running the command below.
+## Plugin templates
+
+- [AdditionalToolbarButton](./templates/AdditionalToolbarButton): Add a toolbar
+  button.
+- [CustomChatButton](./templates/CustomChatButton): Replace the chat button and
+  modal.
+- [CustomEntryPanel](./templates/CustomEntryPanel): Replace the room entry
+  panel.
+- [CustomExitScreen](./templates/CustomExitScreen): Replace the room exit
+  screen.
+- [CustomLeaveButton](./templates/CustomLeaveButton): Replace the leave button
+  and modal.
+- [CustomMegaphoneButton](./templates/CustomMegaphoneButton): Replace the
+  megaphone button.
+- [CustomNearestUserProfile](./templates/CustomNearestUserProfile): Replace the
+  nearest-user profile UI.
+- [CustomOverlay](./templates/CustomOverlay): Add a custom overlay.
+- [CustomProfileModal](./templates/CustomProfileModal): Replace the profile
+  modal.
+- [CustomTutorial](./templates/CustomTutorial): Add a custom tutorial.
+- [CustomWebCameraButton](./templates/CustomWebCameraButton): Replace the web
+  camera button and popup.
+
+## Plugin examples
+
+- [password-collection-modal](./examples/password-collection-modal): A
+  `CustomOverlay` example for a password collection flow.
+- [external-api-auth](./examples/external-api-auth): An end-to-end example that
+  calls an external API with a plugin API token and verifies it in a sample
+  backend.
+
+## Start from a template
+
+Clone this repository and copy the template that matches the plugin type you
+want to implement. For example:
 
 ```bash
-git clone git@github.com:urth-inc/metatell-plugin-template.git
-```
-
-2. Copy the selected plugin template to your desired location
-
-If you select the `AdditionalToolbarButton` plugin template, you can copy it to your desired location by running the command below.
-
-```bash
-cp -r metatell-plugin-template/AdditionalToolbarButton /path/to/your/desired/location
-```
-
-3. Initialize the git repository
-
-You can initialize the git repository by running the command below.
-
-```bash
-cd /path/to/your/desired/location
+git clone git@github.com:urth-inc/metatell-plugins.git
+cp -R metatell-plugins/templates/AdditionalToolbarButton /path/to/your/plugin
+cd /path/to/your/plugin
 git init
 git add .
 git commit -m "Initial commit"
 ```
 
-Each plugin template has its own README file that explains how to develop the plugin.
+Each template README describes its interface and development workflow.
 
-## How to load local plugin from local metatell
+## Develop a template locally
 
-We assume that local plugin is running on `http://localhost:3004`.
+Run commands from the selected template directory:
 
-1. update `src/hub.js` in `metatell_client`. VersionId is written in `.uuid.env` in `metatell-plugin-template`.
-
-If you run `npm run dev` or `npm run build`, `versionId` will be changed every time.
-
-```js
-  if (plugins) {
-    // const remotes = plugins.map(plugin => {
-    //   return {
-    //     name: plugin.versionId,
-    //     alias: plugin.id,
-    //     entry: `${process.env.REACT_APP_PUBLIC_R2_BUCKET_URL}/plugins/${plugin.id}/${plugin.versionId}/remoteEntry.js`
-    //   }
-    // })
-    init({
-      remotes: [
-        {
-          name: "app_{versionId (uuid)}",
-          alias: "plugin",
-          entry: "http://localhost:3004/remoteEntry.js"
-        }
-      ]
-    })
-  }
+```bash
+cd templates/AdditionalToolbarButton
+npm install
+npm run dev
 ```
 
-2. Overwrite `mfSrc` props like bellow.
+Template development servers use `http://localhost:3004` by default. Running
+`npm run dev` or `npm run build` generates a new plugin version ID in
+`.uuid.env`.
 
-```js
-  mfSrc = "plugin/{pluginType}",
+Use the template's build command to create the upload artifact:
+
+```bash
+npm run build
 ```
 
-The same type of plugin may not work properly if applied multiple times to the same room.
-In that case, you can un-applied the plugin from `metatell-admin`.
-
-## List of plugin templates
-
-- [AdditionalToolbarButton](./AdditionalToolbarButton): This plugin template shows how to create an additional toolbar button.
-- [CustomOverlay](./CustomOverlay): This plugin template shows how to create a custom overlay.
-- [CustomEntryPanel](./CustomEntryPanel): This plugin template shows how to create a custom entry panel.
-- [CustomProfileModal](./CustomProfileModal): This plugin template shows how to create a custom profile modal.
-- [CustomLeaveButton](./CustomLeaveButton): This plugin template shows how to create a custom leave button.
-- [CustomChatButton](./CustomChatButton): This plugin template shows how to create a custom chat button and modal.
-- [CustomMegaphoneButton](./CustomMegaphoneButton): This plugin template shows how to create a custom megaphone button.
-- [CustomNearestUserProfile](./CustomNearestUserProfile): This plugin template shows how to create a custom NearestUserProfile.
-- [CustomTutorial](./CustomTutorial): This plugin template shows how to create a custom tutorial.
-- [CustomExitScreen](./CustomExitScreen): This plugin template shows how to create a custom exit screen.
+The generated plugin archive is written to `dist/plugin.zip`.

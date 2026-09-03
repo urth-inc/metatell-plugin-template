@@ -28,10 +28,10 @@ For password-collection-modal, you can use the following settings.
 - event: `find-password`
 - detail:
 
-```
+```json
 {
-   "index": 0
-   "image_url": "https://example.com/image.png",
+   "index": 0,
+   "image_url": "https://example.com/image.png"
 }
 ```
 
@@ -44,7 +44,6 @@ If you want to show image modal when the user finds the password, you can use `2
 You can customize the modal by changing plugin code.
 The plugin code is written in TypeScript, so you can easily change the behavior of the modal.
 
-Plugin template repository may be useful to start developing your own plugin.
+The plugin templates may be useful when starting your own plugin.
 
-- https://github.com/urth-inc/metatell_plugin_template/tree/develop/CustomOverlay
-
+- [CustomOverlay template](../../templates/CustomOverlay)

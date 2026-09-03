@@ -1,13 +1,9 @@
-# This file is used to ignore files and directories in the project
-
-# ignore node_modules directory
-node_modules
-
-# ignore dist directory
-dist
-
-# ignore .env files
+node_modules/
+dist/
+.uuid.env
 .env
-
-# ignore macOS metadata files
+.env.*
+!.env.example
+.__mf__temp/
+*.log*
 .DS_Store
