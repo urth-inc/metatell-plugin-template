@@ -1,0 +1,4 @@
+interface:
+  display_name: "metatell Plugin Dev"
+  short_description: "Build and validate metatell client plugins"
+  default_prompt: "Use $metatell-plugin-dev to build, validate, package, and apply a metatell client plugin."

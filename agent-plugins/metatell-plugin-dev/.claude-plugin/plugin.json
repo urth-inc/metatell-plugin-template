@@ -1,0 +1,11 @@
+{
+  "name": "metatell-plugin-dev",
+  "version": "1.0.0",
+  "description": "Build, validate, package, and apply metatell client plugins.",
+  "author": {
+    "name": "Urth, Inc.",
+    "url": "https://urth.co.jp"
+  },
+  "repository": "https://github.com/urth-inc/metatell-plugins",
+  "license": "MIT"
+}

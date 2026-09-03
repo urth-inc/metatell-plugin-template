@@ -1,7 +1,8 @@
 # metatell plugins
 
 This repository contains templates and runnable examples for developing plugins
-for metatell. The plugin frontends are written in TypeScript and React.
+for metatell, plus an LLM-agent plugin that assists with that development. The
+metatell plugin frontends are written in TypeScript and React.
 
 ## Repository layout
 
@@ -9,7 +10,38 @@ for metatell. The plugin frontends are written in TypeScript and React.
   supported plugin type.
 - [`examples`](./examples) contains runnable reference implementations for
   specific use cases.
+- [`agent-plugins`](./agent-plugins) contains plugins for LLM agents. These are
+  development tools and are distinct from the metatell plugins under
+  `templates` and `examples`.
 
 Each project is self-contained and has its own package manager configuration and
 README. This repository intentionally does not define a root package-manager
 workspace.
+
+## Install the LLM-agent plugin
+
+The `metatell-plugin-dev` plugin helps Claude Code, Codex CLI, and GitHub
+Copilot CLI build and validate metatell plugins.
+
+### Claude Code
+
+```text
+/plugin marketplace add urth-inc/metatell-plugins
+/plugin install metatell-plugin-dev@urth
+```
+
+### Codex CLI 0.147.0 or later
+
+```bash
+codex plugin marketplace add urth-inc/metatell-plugins
+codex plugin add metatell-plugin-dev@urth
+```
+
+### GitHub Copilot CLI
+
+```bash
+copilot plugin install urth-inc/metatell-plugins:agent-plugins/metatell-plugin-dev
+```
+
+See [`agent-plugins/metatell-plugin-dev`](./agent-plugins/metatell-plugin-dev)
+for its contents and usage.
