@@ -1,0 +1,15 @@
+{
+  "name": "urth",
+  "description": "Agent plugins for metatell development.",
+  "owner": {
+    "name": "Urth, Inc."
+  },
+  "plugins": [
+    {
+      "name": "metatell-plugin-dev",
+      "source": "./agent-plugins/metatell-plugin-dev",
+      "description": "Build, validate, package, and apply metatell client plugins.",
+      "version": "1.0.0"
+    }
+  ]
+}
